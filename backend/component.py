@@ -49,7 +49,7 @@ class Backend(Stack):
         # https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-dynamodb.html
         demo_dS.create_resolver("QueryGetDemosResolver",
             type_name="Query",
-            field_name="getDemos",
+            field_name="listDemos",
             request_mapping_template=appsync.MappingTemplate.dynamo_db_scan_table(),
             response_mapping_template=appsync.MappingTemplate.dynamo_db_result_list()
         )
@@ -65,9 +65,9 @@ class Backend(Stack):
         )
         
         # To enable DynamoDB read consistency with the `MappingTemplate`:
-        demo_dS.create_resolver("QueryGetDemosConsistentResolver",
-            type_name="Query",
-            field_name="getDemosConsistent",
-            request_mapping_template=appsync.MappingTemplate.dynamo_db_scan_table(True),
-            response_mapping_template=appsync.MappingTemplate.dynamo_db_result_list()
-        )
+#        demo_dS.create_resolver("QueryGetDemosConsistentResolver",
+#            type_name="Query",
+#            field_name="getDemosConsistent",
+#            request_mapping_template=appsync.MappingTemplate.dynamo_db_scan_table(True),
+#            response_mapping_template=appsync.MappingTemplate.dynamo_db_result_list()
+#        )
