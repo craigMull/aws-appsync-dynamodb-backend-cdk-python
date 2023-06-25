@@ -55,4 +55,16 @@ command.
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
-Enjoy!
+
+## Python CDK Best practices
+
+
+
+
+## Links
+
+- 1 [Recommend CDK Project Structure for Python Applications](https://aws.amazon.com/blogs/developer/recommended-aws-cdk-project-structure-for-python-applications/)
+- 2 [Best Practices for Developing CDK Applications](https://aws.amazon.com/blogs/devops/best-practices-for-developing-cloud-applications-with-aws-cdk/)
+- 3 [Perscriptive Guidance using CDK nag rule packs](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/check-aws-cdk-applications-or-cloudformation-templates-for-best-practices-by-using-cdk-nag-rule-packs.html)
+- 4 [AWS Samples CDK Project Strucutre for Python](https://github.com/aws-samples/aws-cdk-project-structure-python)
+

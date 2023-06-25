@@ -3,11 +3,14 @@ import os
 
 import aws_cdk as cdk
 
-from aws_appsync_dynamodb_backend_cdk_python.aws_appsync_dynamodb_backend_cdk_python_stack import AwsAppsyncDynamodbBackendCdkPythonStack
+import constants
+from backend.component import Backend
+
+#from aws_appsync_dynamodb_backend_cdk_python.aws_appsync_dynamodb_backend_cdk_python_stack import AwsAppsyncDynamodbBackendCdkPythonStack
 
 
 app = cdk.App()
-AwsAppsyncDynamodbBackendCdkPythonStack(app, "AwsAppsyncDynamodbBackendCdkPythonStack",
+#AwsAppsyncDynamodbBackendCdkPythonStack(app, "AwsAppsyncDynamodbBackendCdkPythonStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
@@ -23,6 +26,14 @@ AwsAppsyncDynamodbBackendCdkPythonStack(app, "AwsAppsyncDynamodbBackendCdkPython
     #env=cdk.Environment(account='123456789012', region='us-east-1'),
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
+#    )
+Backend(
+    app,
+    constants.APP_NAME + "Sandbox",
+#    env=cdk.Environment(
+#        account=os.environ["CDK_DEFAULT_ACCOUNT"],
+#        region=os.environ["CDK_DEFAULT_REGION"],
+#    ),
     )
 
 app.synth()
